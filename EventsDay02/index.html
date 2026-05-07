@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventsDay02</title>
+</head>
+
+<style>
+    p{
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    <button id="Msg" onclick="msg()">Click me to show Msg</button><br><br>
+    <label>Enter Text:</label>
+    <input type="text" id="text" onchange="changeText(this)" onfocus="foc()" onblur="(focout())">
+    <p id="change">Text Will Change</p>
+    <p id="hover" onmouseover="(hover())" onmouseout="(leave())">Hover me!</p>
+
+
+    
+</body>
+
+<script>
+    function msg(){
+        alert("Button Clicked")
+    }
+    
+    function changeText(input)
+    {
+        document.getElementById("change").innerText="Hello "+input.value;
+    }
+
+    function hover()
+    {
+        document.getElementById("hover").style.color="red"
+    }
+    function leave()
+    {
+        document.getElementById("hover").style.color="black"
+    }
+
+    function foc(){
+        document.getElementById("text").style.border="10px solid blue";
+    }
+    function focout(){
+        document.getElementById("text").style.border="";
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<style>
+    p{
+        font-size: 50px;
+    }
+    img{
+        height: 500px;
+        width: auto;
+    }
+</style>
+<body id="body">
+    <button id="Button" onclick="showMsg()">Click me</button>
+    <p id="para">Hello</p>
+    <p id="hide">Vanish</p>
+    <button  onclick="changePara()">Click Me To Change text</button>
+    <button  onclick="changeClr()">Click Me To Change Color</button>
+    <button  onclick="hide()">Click Me To Vanish text</button>
+    <button  onclick="changeBg()">Click Me To Change BgColor</button><br>
+    <br>
+    <img id="pic" src="beachLeo.jpg" alt="" style="display: none;"><br>
+    <button onclick="img()">Show Image</button>
+
+    <p id="dec">harry muguire</p>
+    <button onclick="setup()">mu</button>
+
+
+    </body>
+</html>
+
+<script>
+function showMsg()
+{
+    alert("Hello!")
+}
+
+function changePara()
+{
+    document.getElementById("para").innerText="Paragraph Changed"
+}
+
+function changeClr(){
+    document.getElementById("para").style.color="blue";
+}
+
+function changeBg(){
+    document.getElementById("body").style.backgroundColor="#c2c2c2";
+}
+
+function hide(){
+    document.getElementById("hide").style.display="none";
+}
+
+function img(){
+    document.getElementById("pic").style.display="block";
+}
+
+function setup(){
+    document.getElementById("dec").style.color="red";
+}
+</script>
