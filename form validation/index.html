@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidation</title>
+</head>
+
+<style>
+    body {
+        background-color: beige;
+    }
+
+    form {
+        color: red;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+    }
+
+    input {
+        height: 25px;
+        width: auto;
+    }
+</style>
+
+<body>
+    <form action="" onsubmit="val()">
+        <label for="">Name:</label>
+        <input type="text" id="Name">
+        <br><br>
+        <label for="">Age:</label>
+        <input type="number" id="age">
+        <br><br>
+        <button id="btn">Submit</button>
+    </form>
+</body>
+
+<script>
+    function val() {
+        let name = document.getElementById("Name");
+
+        if (name.value == "") {
+            alert("Enter Name!");
+            return false;
+        }
+
+        let age = (document.getElementById("age").value)
+
+        if (age == "") {
+            alert("Enter Age!");
+        }
+
+        else if (age > 110 || age < 10) {
+            alert("Enter Valid Age!");
+        }
+
+    }
+</script>
+
+</html>
